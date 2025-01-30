@@ -19,9 +19,9 @@ class Main {
     static boolean isLessOrEquals = false;
 
     public static void main(String[] args) {
-        String algebra =
-                "(13 > 10) || ('MARKETPLACE-gustavostore4' != '1290382132') || (1 == 1 && 1 != 1) || ('Criação'.startsWith('C')' && (6.0 < 3.25) && 13 <= 10.01) || ('Gustavo Store 4' == 'x' && 13 != 7)";
-        algebra = "(5 < 7) || ('APP-1234' != '1234') || (0 == 0 && 2 > 1) || ('Desenvolvimento'.endsWith('mento')' && 8.0 >= 3.5 && 10 != 15) || ('LojaOnline' == 'LojaVirtual' && 20 != 20)";
+        //TODO: PRECISO ENCONTRAR UMA FORMA DE IDENTIFICAR ENDSWITH E STARTSWITH SEM TER QUE ALTERAR A TRANSFORMAÇÃO
+
+        String algebra = "(5 < 7) || ('APP-1234' != '1234') || (0 == 0 && 2 > 1) || ('Desenvolvimento'.endsWith('mento')' && 8.0 >= 3.5 && 10 != 15) || ('LojaOnline' == 'LojaVirtual' && 20 != 20)";
         boolean result = evaluate(algebra, 1);
         System.out.println("Resultado: " + result);
     }
@@ -297,4 +297,6 @@ class Main {
         }
         return false;
     }
+
+    // "(13 > 10) || ('MARKETPLACE-gustavostore4' != '1290382132') || (1 == 1 && 1 != 1) || ('Criação'.startsWith('C')' && (6.0 < 3.25) && 13 <= 10.01) || ('Gustavo Store 4' == 'x' && 13 != 7)";
 }
